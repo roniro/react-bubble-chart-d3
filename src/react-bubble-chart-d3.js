@@ -111,10 +111,10 @@ export default class BubbleChart extends Component {
       .attr("r", function(d) { return d.r - (d.r * .04); })
       .style("fill", function(d) { return d.data.color ? d.data.color : color(nodes.indexOf(d)); })
       .style("z-index", 1)
-      .on('mouseover', function(d) {
+      .on('mouseover', function(event, d) {
         d3.select(this).attr("r", d.r * 1.04);
       })
-      .on('mouseout', function(d) {
+      .on('mouseout', function(event, d) {
         const r = d.r - (d.r * 0.04);
         d3.select(this).attr("r", r);
       });
@@ -222,10 +222,10 @@ export default class BubbleChart extends Component {
         textOffset+= legendFont.size + 10;
         return `translate(0,${offset})`;
       })
-      .on('mouseover', function(d) {
+      .on('mouseover', function(event, d) {
         d3.select('#' + d.id).attr("r", d.r * 1.04);
       })
-      .on('mouseout', function(d) {
+      .on('mouseout', function(event, d) {
         const r = d.r - (d.r * 0.04);
         d3.select('#' + d.id).attr("r", r);
       })
