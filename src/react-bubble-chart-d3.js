@@ -56,7 +56,7 @@ export default class BubbleChart extends Component {
 
     const bubblesWidth = showLegend ? width * (1 - (legendPercentage / 100)) : width;
     const legendWidth = width - bubblesWidth;
-    const color = d3.scaleOrdinal(d3.schemeCategory20c);
+    const color = d3.scaleOrdinal(d3.schemeRdPu[9]);
 
     const pack = d3.pack()
         .size([bubblesWidth * graph.zoom, bubblesWidth * graph.zoom])
