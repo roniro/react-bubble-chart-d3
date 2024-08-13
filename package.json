@@ -1,6 +1,6 @@
 {
   "name": "@weknow/react-bubble-chart-d3",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "ReactJS component to display data as a bubble chart using D3.",
   "keywords": [
     "ReactJS",
@@ -11,7 +11,7 @@
     "Graphics"
   ],
   "author": "weKnow Inc",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/weknowinc/react-bubble-chart-d3"
@@ -29,9 +29,5 @@
     "build": "npm run build:lib && npm run build:dist",
     "build:lib": "react-build-lib",
     "build:dist": "react-build-dist --bundle-name react-bubble-chart-d3.js"
-  },
-  "devDependencies": {
-    "react-build-dist": "0.0.8",
-    "react-build-lib": "0.0.2"
   }
 }
