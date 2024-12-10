@@ -71,6 +71,11 @@ export default class BubbleChart extends Component {
         d.label = d.data.label;
         d.id = d.data.label.toLowerCase().replace(/ |\//g, "-");
       }
+      if (!d.data.text) {
+        d.text = d.value;
+      } else {
+        d.text = d.data.text;
+      }
     });
 
     // Pass the data to the pack layout to calculate the distribution.
@@ -141,7 +146,7 @@ export default class BubbleChart extends Component {
       .style("stroke-width", () => {
         return valueFont.lineWeight ? valueFont.lineWeight : 0;
       })
-      .text(function(d) { return d.value; });
+      .text(function(d) { return d.text; });
 
     node.append("text")
       .attr("class", "label-text")
